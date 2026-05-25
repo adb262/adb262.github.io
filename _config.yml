@@ -1,0 +1,31 @@
+# Site settings
+title: Allan Bishop
+email: adb262@cornell.edu
+description: >-
+  Allan Bishop — Machine Learning at Latent Health. Research in adaptive LLMs,
+  world models, and clinical intelligence.
+author: Allan Bishop
+github_username: adb262
+
+# URL settings
+# This is a user site served at the apex domain, so baseurl is empty.
+domain: adb262.github.io
+url: "https://adb262.github.io"
+baseurl: ""
+
+# Build settings
+# We are serving a hand-written index.html — no theme layouts are applied.
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - node_modules/
