@@ -14,7 +14,10 @@ url: "https://adb262.github.io"
 baseurl: ""
 
 # Build settings
-# We are serving a hand-written index.html — no theme layouts are applied.
+# We are serving a hand-written index.html with our own CSS — no Jekyll theme
+# should run. Without this, github-pages defaults to jekyll-theme-primer, which
+# ships its own assets/css/style.scss that overwrites our static stylesheet.
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

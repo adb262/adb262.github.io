@@ -6,7 +6,7 @@ Personal site &mdash; Allan Bishop. Static HTML/CSS, served by GitHub Pages from
 
 ```
 index.html                  bio + writing + projects + contact (single page)
-assets/css/style.css        academic theme
+assets/css/site.css         academic theme
 assets/images/              square thumbnails for the writing list (currently SVG placeholders)
 ```
 
