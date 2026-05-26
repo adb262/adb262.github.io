@@ -337,6 +337,196 @@ a:hover {
     min-width: 70px;
 }
 
+/* Blog post (used by _layouts/blog.html) */
+.post {
+    padding: 56px 0 32px;
+}
+
+.post-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+}
+
+.post-meta {
+    font-family: var(--sans);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-meta-dot {
+    opacity: 0.55;
+}
+
+.post-title {
+    font-family: var(--serif);
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.post-footer {
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+}
+
+.post-back {
+    font-family: var(--sans);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    border-bottom: none;
+}
+
+.post-back:hover {
+    color: var(--accent);
+}
+
+/* Prose: long-form typography for blog content */
+.prose {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--fg);
+}
+
+.prose > * + * {
+    margin-top: 1.1em;
+}
+
+.prose p {
+    margin: 0 0 1.1em 0;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+    font-family: var(--serif);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 1.8em 0 0.5em 0;
+}
+
+.prose h1 { font-size: 30px; }
+.prose h2 { font-size: 25px; }
+.prose h3 { font-size: 21px; }
+.prose h4 { font-size: 19px; color: var(--muted); }
+
+.prose a {
+    color: var(--fg);
+    text-decoration: none;
+    border-bottom: 1px solid #c9c2b3;
+}
+
+.prose a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.prose strong {
+    font-weight: 600;
+}
+
+.prose em {
+    font-style: italic;
+}
+
+.prose blockquote {
+    margin: 1.6em 0;
+    padding: 4px 0 4px 22px;
+    border-left: 3px solid var(--accent);
+    color: #3a3a3a;
+    font-style: italic;
+}
+
+.prose blockquote p {
+    margin: 0;
+}
+
+.prose ul,
+.prose ol {
+    margin: 1.1em 0;
+    padding-left: 1.5em;
+}
+
+.prose li {
+    margin: 0.4em 0;
+}
+
+.prose hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2.4em 0;
+}
+
+.prose figure {
+    margin: 2em 0;
+}
+
+.prose figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+}
+
+.prose figcaption {
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+    text-align: center;
+    margin-top: 12px;
+}
+
+.prose img {
+    max-width: 100%;
+    height: auto;
+}
+
+.prose code {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.88em;
+    background: #f1ede3;
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+
+.prose pre {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 14.5px;
+    line-height: 1.55;
+    background: #f7f4ec;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    margin: 1.4em 0;
+}
+
+.prose pre code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+}
+
+/* MathJax — keep display math from collapsing margins awkwardly */
+.prose mjx-container[display="true"] {
+    margin: 1.2em 0 !important;
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     body {
@@ -409,4 +599,20 @@ a:hover {
     .project-desc {
         font-size: 16px;
     }
+
+    .post {
+        padding: 36px 0 20px;
+    }
+
+    .post-title {
+        font-size: 30px;
+    }
+
+    .prose {
+        font-size: 17px;
+    }
+
+    .prose h1 { font-size: 26px; }
+    .prose h2 { font-size: 22px; }
+    .prose h3 { font-size: 19px; }
 }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} — Allan Bishop</title>
+    {% if page.description %}
+    <meta name="description" content="{{ page.description | escape }}">
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+    {% if page.math %}
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true
+        },
+        options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    {% endif %}
+</head>
+<body>
+    <div class="container">
+        <header class="site-header">
+            <div class="header-inner">
+                <a href="{{ '/' | relative_url }}" class="site-name">Allan Bishop</a>
+                <nav class="site-nav">
+                    <a href="{{ '/#bio' | relative_url }}">Bio</a>
+                    <a href="{{ '/#writing' | relative_url }}">Writing</a>
+                    <a href="{{ '/#projects' | relative_url }}">Projects</a>
+                    <a href="{{ '/#contact' | relative_url }}">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            {%- comment -%}
+              Read time: prefer explicit `read_minutes` from frontmatter, otherwise
+              compute from word count at ~200 wpm (rounded up, minimum 1 minute).
+              The "~" prefix signals to readers that it's an estimate.
+            {%- endcomment -%}
+            {%- if page.read_minutes -%}
+              {%- assign read_min = page.read_minutes -%}
+            {%- else -%}
+              {%- assign words = content | number_of_words -%}
+              {%- assign read_min = words | plus: 199 | divided_by: 200 -%}
+            {%- endif -%}
+
+            <article class="post">
+                <header class="post-header">
+                    <div class="post-meta">
+                        {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>{% endif %}
+                        {% if page.date %}<span class="post-meta-dot" aria-hidden="true">·</span>{% endif %}
+                        <span class="post-readtime">~{{ read_min }} min read</span>
+                    </div>
+                    <h1 class="post-title">{{ page.title }}</h1>
+                </header>
+
+                <div class="prose">
+                    {{ content }}
+                </div>
+
+                <footer class="post-footer">
+                    <a href="{{ '/#writing' | relative_url }}" class="post-back">&larr; back to writing</a>
+                </footer>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-inner">
+                <h2 class="footer-title">Contact</h2>
+                <p class="footer-line">
+                    <span class="footer-label">Email</span>
+                    <a href="mailto:adb262@cornell.edu">adb262@cornell.edu</a>
+                </p>
+                <p class="footer-line">
+                    <span class="footer-label">GitHub</span>
+                    <a href="https://github.com/adb262" target="_blank" rel="noopener">github.com/adb262</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
