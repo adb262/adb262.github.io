@@ -11,7 +11,7 @@ Programming changes. Typically, we progress up the ladder of abstraction, removi
 
 Coding agents look like the next step. You describe behavior in English, and the machine writes code. Are we just progressing to the next level of abstraction?
 
-Consider the most popular coding languages in history: C, Java, Python. These are all formal languages. English is not.
+The most popular programming languages in history are all _formal_. English is not.
 
 ---
 
