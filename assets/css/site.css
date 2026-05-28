@@ -138,6 +138,128 @@ a:hover {
     border-bottom: 1px solid #c9c2b3;
 }
 
+/* Timeline (CV-style entries inside the bio section). */
+.timeline {
+    margin: 32px 0 8px;
+}
+
+.timeline-item {
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+}
+
+.timeline-item:first-child {
+    border-top: none;
+    padding-top: 12px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 4px;
+}
+
+.timeline-place {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 0;
+    line-height: 1.2;
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.timeline-link {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: none;
+    position: relative;
+    top: -2px;
+}
+
+.timeline-link:hover {
+    color: var(--accent);
+}
+
+.timeline-roles {
+    margin: 18px 0 0 8px;
+    padding: 2px 0 2px 26px;
+    border-left: 1px solid var(--rule);
+}
+
+.timeline-role {
+    position: relative;
+    padding: 16px 0 0;
+}
+
+.timeline-role:first-child {
+    padding-top: 0;
+}
+
+.timeline-role::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 25px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--muted);
+    box-sizing: border-box;
+}
+
+.timeline-role:first-child::before {
+    top: 9px;
+}
+
+.timeline-role--current::before {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.timeline-role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.timeline-title {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin: 0;
+}
+
+.timeline-duration {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.timeline-desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #3a3a3a;
+    margin: 6px 0 0 0;
+}
+
+.timeline-desc a {
+    border-bottom: 1px solid var(--rule);
+}
+
 /* Writing */
 .writing-list {
     list-style: none;
@@ -561,6 +683,27 @@ a:hover {
 
     .bio-section {
         padding-top: 48px;
+    }
+
+    .timeline-place {
+        font-size: 20px;
+    }
+
+    .timeline-roles {
+        margin-left: 2px;
+        padding-left: 20px;
+    }
+
+    .timeline-role::before {
+        left: -25px;
+    }
+
+    .timeline-role-head {
+        gap: 4px 14px;
+    }
+
+    .timeline-desc {
+        font-size: 16px;
     }
 
     .writing-item {
