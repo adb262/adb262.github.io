@@ -597,7 +597,8 @@ a:hover {
     margin: 2em 0;
 }
 
-.prose figure img {
+.prose figure img,
+.prose figure video {
     display: block;
     width: 100%;
     height: auto;
@@ -611,6 +612,38 @@ a:hover {
     color: var(--muted);
     text-align: center;
     margin-top: 12px;
+}
+
+/* Side-by-side figures, à la a LaTeX subfigure row. Each child <figure>
+   shares the row width evenly and is stretched to a common height so the
+   images line up top and bottom regardless of their native aspect ratios. */
+.prose .figure-row {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin: 2em 0;
+}
+
+.prose .figure-row figure {
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.prose .figure-row figure img {
+    flex: 1 1 auto;
+    min-height: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Constrain a single figure (image or video) to a smaller, centered column. */
+.prose figure.narrow {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .prose img {
@@ -758,4 +791,14 @@ a:hover {
     .prose h1 { font-size: 26px; }
     .prose h2 { font-size: 22px; }
     .prose h3 { font-size: 19px; }
+
+    /* Stack side-by-side figures on narrow screens. */
+    .prose .figure-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .prose .figure-row figure {
+        margin: 1.4em 0;
+    }
 }
