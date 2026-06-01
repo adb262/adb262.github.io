@@ -31,10 +31,11 @@
             <div class="header-inner">
                 <a href="{{ '/' | relative_url }}" class="site-name">Allan Bishop</a>
                 <nav class="site-nav">
-                    <a href="{{ '/#bio' | relative_url }}">Bio</a>
-                    <a href="{{ '/#writing' | relative_url }}">Writing</a>
-                    <a href="{{ '/#projects' | relative_url }}">Projects</a>
-                    <a href="{{ '/#contact' | relative_url }}">Contact</a>
+                    <a href="{{ '/' | relative_url }}">Bio</a>
+                    <a href="{{ '/writing/' | relative_url }}">Writing</a>
+                    <a href="{{ '/timeline/' | relative_url }}">Timeline</a>
+                    <a href="{{ '/projects/' | relative_url }}">Projects</a>
+                    <a href="#contact">Contact</a>
                 </nav>
             </div>
         </header>
@@ -67,12 +68,12 @@
                 </div>
 
                 <footer class="post-footer">
-                    <a href="{{ '/#writing' | relative_url }}" class="post-back">&larr; back to writing</a>
+                    <a href="{{ '/writing/' | relative_url }}" class="post-back">&larr; back to writing</a>
                 </footer>
             </article>
         </main>
 
-        <footer class="site-footer">
+        <footer id="contact" class="site-footer">
             <div class="footer-inner">
                 <h2 class="footer-title">Contact</h2>
                 <p class="footer-line">

@@ -5,10 +5,17 @@ Personal site &mdash; Allan Bishop. Static HTML/CSS, served by GitHub Pages from
 ## Structure
 
 ```
-index.html                  bio + writing + projects + contact (single page)
+index.html                  bio (home page) + contact footer
+writing/index.html          writing list + contact footer
+timeline/index.html         CV-style timeline + contact footer
+projects/index.html         projects list + contact footer
 assets/css/site.css         academic theme
 assets/images/              square thumbnails for the writing list (currently SVG placeholders)
 ```
+
+Each top-level page shares the same nav (Bio / Writing / Timeline / Projects /
+Contact) and contact footer. Contact is an in-page anchor (`#contact`) to the
+footer on whichever page you're on.
 
 ## Local preview
 
@@ -35,4 +42,4 @@ Then open <http://localhost:4000>.
 
 ## Adding a new piece of writing
 
-Add a new `<li class="writing-item">` to the `#writing` section in `index.html`. Items are listed reverse-chronological. Drop a square thumbnail in `assets/images/`.
+Add a new `<li class="writing-item">` to the `.writing-list` in `writing/index.html`. Items are listed reverse-chronological. Drop a square thumbnail in `assets/images/`.

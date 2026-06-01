@@ -92,6 +92,10 @@ a:hover {
     color: var(--accent);
 }
 
+.site-nav a.active {
+    color: var(--fg);
+}
+
 /* Sections */
 .section {
     padding: 60px 0 20px;

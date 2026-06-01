@@ -11,6 +11,8 @@ read_minutes: 20
 
 This started as an effort to reproduce the Genie paper so that I could better understand the challenges [2]. I wanted to understand why the industry (and the Genie team!) has moved away away from latent action models.
 
+All code is available on [GitHub](https://github.com/adb262/Gaia).
+
 ### TL;DR
 
 In practice, unlabelled trajectories allow you to learn underlying dynamics but they do not provide enough signal to learn a general policy for navigation. This medium encodes useful information on the progression of the environment, akin to a human watching a person play a game. That human will gain some priors on the way the game works, but it is impossible for them to become an expert without playing the game directly. For world models, we must build a system on top of this that is capable of autoregressive exploration. This requires *interaction,* not just observation. Unlabeled video data is helpful for building priors but cannot take us all the way.

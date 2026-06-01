@@ -39,7 +39,10 @@ bundle exec jekyll serve --livereload
 
 ```
 .
-├── index.html                  # home page (hand-written, no Jekyll layout)
+├── index.html                  # home page: bio + contact (hand-written, no Jekyll layout)
+├── writing/index.html          # writing list page (hand-written raw HTML)
+├── timeline/index.html         # CV-style timeline page (hand-written raw HTML)
+├── projects/index.html         # projects list page (hand-written raw HTML)
 ├── 404.html                    # standalone 404, links to /assets/css/site.css
 ├── _config.yml                 # Jekyll config; restart server on changes
 ├── _layouts/
@@ -95,8 +98,8 @@ bundle exec jekyll serve --livereload
 
    Always write real `alt` text. Notion exports leave it blank — fix it.
 
-5. **Add the writing-list entry to `index.html`** at the top of
-   `<ol class="writing-list">` (entries are reverse-chronological):
+5. **Add the writing-list entry to `writing/index.html`** at the top of
+ `<ol class="writing-list">` (entries are reverse-chronological):
 
    ```html
    <li class="writing-item">
