@@ -303,10 +303,10 @@ Both of these are using the same architecture. It is quite clear that learning o
 
 <figure>
   <img src="dmodel-scaling.png" alt="Curves comparing dynamics-model width of 256 versus 512 across 5- and 16-frame contexts, where the wider model adapts much better to long contexts.">
-  <figcaption>Effects of increasing $d\_model$ for the dynamics model from 256 to 512. With increased representational capacity, we are much more adaptable to the long frame context. Pink is $d\_model=512$ for $num\_frames\_in\_video=16$, orange is $d\_model=256$ for $num\_frames\_in\_video=16$, green is $d\_model=256$ for $num\_frames\_in\_video=5$. Since we scale some internal layers with $d\_model$, this comes at about a 4x cost.</figcaption>
+  <figcaption>Effects of increasing <code>d_model</code> for the dynamics model from 256 to 512. With increased representational capacity, we are much more adaptable to the long frame context. Pink is <code>d_model=512</code> for $num\_frames\_in\_video=16$, orange is <code>d_model=256</code> for $num\_frames\_in\_video=16$, green is <code>d_model=256</code> for $num\_frames\_in\_video=5$. Since we scale some internal layers with <code>d_model</code>, this comes at about a 4x cost.</figcaption>
 </figure>
 
-All of the experiments above are using a 9m decoder and 17m tokenizer. $d\_model=256$ equates to ~20m parameters, while $d\_model=512$ equates to ~80m. I decide its alright to eat the cost for now. Let's get something to work and we can optimize later.
+All of the experiments above are using a 9m decoder and 17m tokenizer. `d_model=256` equates to ~20m parameters, while `d_model=512` equates to ~80m. I decide its alright to eat the cost for now. Let's get something to work and we can optimize later.
 
 ### Results
 
