@@ -9,7 +9,7 @@ read_minutes: 20
 
 ### Introduction
 
-This started as an effort to reproduce the Genie paper so that I could better understand the challenges [2]. I wanted to understand why the industry (and the Genie team!) has moved away away from latent action models.
+This started as an effort to reproduce the Genie paper and understand its practical challenges [2]. It evolved into an investigation of the limits of raw video as the sole learning signal, and why prevailing world model architectures have largely moved toward supervised action labels instead of latent action models.
 
 All code is available on [GitHub](https://github.com/adb262/Gaia).
 
@@ -19,7 +19,7 @@ In practice, unlabelled trajectories allow you to learn underlying dynamics but 
 
 ### Background
 
-World models go by many definitions [0][5]. We define the interactive environment as a function that produces the next state $s_{t+1}$.
+World models go by many definitions [0][5]. We use the functional definition of an action-conditioned model that predicts the next state $s_{t+1}$.
 
 $$
 s_{t+1} = \pi_\theta(s_{t-window:t}, a_{t-window:t})
