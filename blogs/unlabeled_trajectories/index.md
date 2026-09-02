@@ -169,6 +169,11 @@ We use $84 \times 84$ images and a patch size of 4, creating 441 target codes pe
 
 For each sampling strategy, we create true held-out sets. These are sets that never appear (a) in the strategy-specific model's training data or (b) in any other model's training data.
 
+<figure>
+  <img src="k-experiment-training-mixtures.jpg" alt="A grid of line charts comparing training loss and held-out K equals 1, K equals 9, policy, and aggregate metrics across several training-data mixtures as the number of training windows increases.">
+  <figcaption>Results from the $K$ experiment, comparing how different training-data mixtures transfer to held-out $K=1$, $K=9$, policy-conditioned, and aggregate evaluations.</figcaption>
+</figure>
+
 ## Experiment 2 — Intervention vs. Counterfactual Prediction
 
 **Question:** Does observing what actually happened provide information useful for predicting what would have happened under another action?
