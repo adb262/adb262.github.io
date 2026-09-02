@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-labelledby="title">
+  <title id="title">A trajectory branching into observed and counterfactual outcomes</title>
+  <rect width="400" height="400" fill="#ece8de"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M64 200 H202" stroke="#b8b09c" stroke-width="3"/>
+    <path d="M202 200 C260 200 255 120 330 120" stroke="#718699" stroke-width="4"/>
+    <path d="M202 200 C260 200 255 280 330 280" stroke="#a9824d" stroke-width="4" stroke-dasharray="10 9"/>
+  </g>
+  <g fill="#ece8de" stroke-width="4">
+    <circle cx="64" cy="200" r="18" stroke="#b8b09c"/>
+    <circle cx="202" cy="200" r="22" stroke="#8a8676"/>
+    <circle cx="330" cy="120" r="18" stroke="#718699"/>
+    <circle cx="330" cy="280" r="18" stroke="#a9824d"/>
+  </g>
+  <circle cx="202" cy="200" r="5" fill="#8a8676"/>
+</svg>

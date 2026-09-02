@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 360" role="img" aria-labelledby="title desc">
+  <title id="title">Observed and counterfactual trajectory fork</title>
+  <desc id="desc">A shared sequence of states reaches state s t, then branches to an observed next state under action a t and a counterfactual next state under an alternative action.</desc>
+  <defs>
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a8676"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4f6d8a"/>
+    </marker>
+    <marker id="arrow-gold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#a06f2c"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="360" fill="#fbfaf7"/>
+
+  <g fill="none" stroke="#8a8676" stroke-width="2" marker-end="url(#arrow-gray)">
+    <path d="M150 180 H265"/>
+    <path d="M365 180 H480"/>
+  </g>
+
+  <path d="M580 180 C650 180 650 95 715 95" fill="none" stroke="#4f6d8a" stroke-width="3" marker-end="url(#arrow-blue)"/>
+  <path d="M580 180 C650 180 650 265 715 265" fill="none" stroke="#a06f2c" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrow-gold)"/>
+
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif" text-anchor="middle">
+    <g fill="#ece8de" stroke="#b8b09c" stroke-width="2">
+      <rect x="50" y="140" width="100" height="80" rx="4"/>
+      <rect x="265" y="140" width="100" height="80" rx="4"/>
+    </g>
+    <rect x="480" y="140" width="100" height="80" rx="4" fill="#f3eadc" stroke="#a06f2c" stroke-width="3"/>
+    <rect x="715" y="55" width="135" height="80" rx="4" fill="#e8eef3" stroke="#4f6d8a" stroke-width="2.5"/>
+    <rect x="715" y="225" width="135" height="80" rx="4" fill="#f3eadc" stroke="#a06f2c" stroke-width="2.5" stroke-dasharray="8 6"/>
+
+    <g fill="#252525" font-family="Crimson Pro, Georgia, serif" font-size="27">
+      <text x="100" y="188">s<tspan baseline-shift="sub" font-size="17">t-window</tspan></text>
+      <text x="315" y="188">s<tspan baseline-shift="sub" font-size="17">t-1</tspan></text>
+      <text x="530" y="188">s<tspan baseline-shift="sub" font-size="17">t</tspan></text>
+      <text x="782" y="95">s<tspan baseline-shift="sub" font-size="17">t+1</tspan></text>
+      <text x="782" y="265">s*<tspan baseline-shift="sub" font-size="17">t+1</tspan></text>
+    </g>
+
+    <g fill="#6f6b60" font-size="14">
+      <text x="207" y="166">history</text>
+      <text x="423" y="166">a<tspan baseline-shift="sub" font-size="10">t-1</tspan></text>
+      <text x="655" y="99" fill="#4f6d8a">a<tspan baseline-shift="sub" font-size="10">t</tspan></text>
+      <text x="648" y="274" fill="#a06f2c">a*<tspan baseline-shift="sub" font-size="10">t</tspan> - what if?</text>
+      <text x="782" y="122" fill="#4f6d8a">observed</text>
+      <text x="782" y="292" fill="#a06f2c">counterfactual</text>
+    </g>
+  </g>
+</svg>
